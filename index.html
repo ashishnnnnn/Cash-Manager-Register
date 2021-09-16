@@ -13,12 +13,16 @@
         <p class="discription">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
         <label class="input-label" for = "bill-amount">Bill Amount</label>
         <input class ="input" id="bill-amount"></input>
-        <label class="input-label" for = "Cash-Given">Cash Given</label>
-        <input class ="input" id="Cash-Given"></input>
-        <button class="Check-Button">Check</button>
+        <button class="Check-Button1">Next</button>
+        <div class="paid-amount">
+          <label class="input-label" for = "Cash-Given">Cash Given</label>
+          <input class ="input" id="Cash-Given"></input>
+          <button class="Check-Button2">Check</button>
+        </div>
         <p id="error-message"></p>
-        <div class="caption">Return Change </div>
-        <table class="change-table">
+        <div class="show-return">
+          <div class="caption">Return Change </div>
+          <table class="change-table">
             <tbody><tr>
               <th>No of Notes</th>
               <td class="no-of-notes"></td>
@@ -46,6 +50,7 @@
               <td>1</td>
             </tr>
           </tbody></table>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
