@@ -41,7 +41,7 @@ function give_amount() {
   if (cash_amount.value == parseInt(cash_amount.value, 10)) {
     if (cash_amount.value > 0) {
       var remaining = cash_amount.value - bill_amount.value;
-      if (remaining >= 0) {
+      if (remaining > 0) {
         error_message.style.display = "none";
         show_return.style.display = "block";
         var remaining = cash_amount.value - bill_amount.value;
@@ -54,6 +54,9 @@ function give_amount() {
             notes_value[i].innerText = "";
           }
         }
+      } else if (remaining == 0) {
+        show_return.style.display = "none";
+        show_error("No return as cash amount is equal to bill");
       } else {
         show_return.style.display = "none";
         show_error("Pay amount atleast equal to bill");
